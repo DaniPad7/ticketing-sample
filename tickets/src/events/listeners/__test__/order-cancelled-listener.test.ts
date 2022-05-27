@@ -31,7 +31,8 @@ it('publishes an event', async () => {
     const { msg, data, listener } = await setup();
     await listener.onMessage(data, msg);
     const ticketUpdatedData = JSON.parse((natsWrapper.client.publish as jest.Mock).mock.calls[0][1]);
-    expect(ticketUpdatedData.orderId).toBeTruthy();
+    
+    expect(ticketUpdatedData.orderId).toBeUndefined();
 
     expect(natsWrapper.client.publish).toHaveBeenCalled();
 });

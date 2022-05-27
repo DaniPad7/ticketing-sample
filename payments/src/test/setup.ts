@@ -8,7 +8,7 @@ declare global {
 
 jest.mock('../nats-wrapper');
 
-// process.env.STRIPE_KEY=Is in user env;
+process.env.STRIPE_KEY="sk_test_51L34KRGAZfrgxAeEO4EZdx5RrYs6hk9zJVYC2AVMAZKtggXU446TkJ4DV3BrLXz5x85wFhS4S4X0tb8GXB6UOBFL00mRBZgIll";
 
 
 // MongoDB in memory allows to run test-suite aat the same time without reaching out to
